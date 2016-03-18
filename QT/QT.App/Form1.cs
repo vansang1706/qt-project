@@ -15,9 +15,32 @@ namespace QT.App
         {
             InitializeComponent();
             _sanPhamService = UnityConfig.GetContainer().Resolve<ISanPhamService>();
+            pnSanPham.Hide();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var frm = new Form2();
+            frm.Show();
+        }
+
+        private void tmSanPham_Click(object sender, EventArgs e)
+        {
+            pnSanPham.Show();
+            tabControl1.TabPages.Remove(tabThemSuaSanPham);
+        }
+
+        private void btThemSanPham_Click(object sender, EventArgs e)
+        {
+            if (!tabControl1.TabPages.Contains(tabThemSuaSanPham))
+            {
+                tabControl1.TabPages.Add(tabThemSuaSanPham);
+                tabThemSuaSanPham.Text = "Thêm Sản Phẩm";
+                tabControl1.SelectedTab = tabThemSuaSanPham;
+            }
+        }
+
+        private void btThem_Click(object sender, EventArgs e)
         {
             var sanPhams = _sanPhamService.GetAllSanPham();
             foreach (var sPham in sanPhams)
@@ -37,17 +60,20 @@ namespace QT.App
             };
             _sanPhamService.InsertSanPham(sanPham);
             MessageBox.Show("Them thanh cong");
+
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
-        }
+            if (tabControl1.SelectedIndex == 0)
+            {
+                if (tabControl1.TabCount > 1)
+                {
+                    tabControl1.TabPages.RemoveAt(1);
+                }
+                
+            }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            var frm = new Form2();
-            frm.Show();
         }
     }
 }
