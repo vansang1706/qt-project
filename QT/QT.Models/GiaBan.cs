@@ -10,7 +10,7 @@ namespace QT.Models
         public int Id { get; set; }
         public int SanPhamId { get; set; }
         public int KhachHangId { get; set; }
-        public float Gia { get; set; }
+        public double Gia { get; set; }
         public DateTime NgayThayDoi { get; set; }
     }
 }

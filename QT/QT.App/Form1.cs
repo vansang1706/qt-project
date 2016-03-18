@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using Microsoft.Practices.Unity;
 using QT.IoC.Unity;
@@ -9,15 +10,24 @@ namespace QT.App
 {
     public partial class Form1 : Form
     {
+        private readonly ISanPhamService _sanPhamService;
         public Form1()
         {
             InitializeComponent();
+            _sanPhamService = UnityConfig.GetContainer().Resolve<ISanPhamService>();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var a = UnityConfig.GetContainer();
-            var b = a.Resolve<ISanPhamService>();
+            var sanPhams = _sanPhamService.GetAllSanPham();
+            foreach (var sPham in sanPhams)
+            {
+                if (tbTenSanPham.Text == sPham.TenSanPham)
+                {
+                    MessageBox.Show("Ten san pham nay da co");
+                    return;
+                }
+            }
             var sanPham = new SanPham
             {
                 TenSanPham = tbTenSanPham.Text,
@@ -25,7 +35,7 @@ namespace QT.App
                 SoLuongTon = float.Parse(nudSoLuongTon.Text)
 
             };
-            b.InsertSanPham(sanPham);
+            _sanPhamService.InsertSanPham(sanPham);
             MessageBox.Show("Them thanh cong");
         }
 

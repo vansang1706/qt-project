@@ -9,7 +9,7 @@ namespace QT.Models
         [Key]
         public int Id { get; set; }
         public int KhachHangId { get; set; }
-        public float TongTien { get; set; }
+        public double TongTien { get; set; }
         public DateTime NgayLap { get; set; }
     }
 }

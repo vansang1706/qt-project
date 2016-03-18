@@ -1,4 +1,6 @@
-﻿using QT.Repository.Pattern.UnitOfWork;
+﻿using System.Collections.Generic;
+using System.Linq;
+using QT.Repository.Pattern.UnitOfWork;
 using QT.Service.Pattern;
 using  QT.Models;
 
@@ -19,5 +21,12 @@ namespace QT.Services
             Insert(sanPham);
             _unitOfWork.SaveChanges();
         }
+
+        public List<SanPham> GetAllSanPham()
+        {
+            return Queryable().ToList();
+        } 
+
+        
     }
 }

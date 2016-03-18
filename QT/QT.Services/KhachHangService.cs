@@ -1,4 +1,6 @@
-﻿using QT.Models;
+﻿using System.Collections.Generic;
+using System.Linq;
+using QT.Models;
 using QT.Repository.Pattern.UnitOfWork;
 using QT.Service.Pattern;
 
@@ -18,5 +20,10 @@ namespace QT.Services
             Insert(khachHang);
             _unitOfWork.SaveChanges();
         }
+
+        public List<KhachHang> GetAllKhachHang()
+        {
+            return Queryable().ToList();
+        } 
     }
 }

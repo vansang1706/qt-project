@@ -1,4 +1,5 @@
-﻿using QT.Models;
+﻿using System.Collections.Generic;
+using QT.Models;
 using QT.Service.Pattern;
 
 namespace QT.Services
@@ -6,5 +7,6 @@ namespace QT.Services
     public interface ISanPhamService : IService<SanPham>
     {
         void InsertSanPham(SanPham sanPham);
+        List<SanPham> GetAllSanPham();
     }
 }
