@@ -16,22 +16,33 @@ namespace QT.App
 {
     public partial class Form2 : Form
     {
+        private readonly IKhachHangService _khachHangService;
         public Form2()
         {
             InitializeComponent();
+            _khachHangService = UnityConfig.GetContainer().Resolve<IKhachHangService>();
         }
 
         private void btThemKhachHang_Click(object sender, EventArgs e)
         {
-            var a = UnityConfig.GetContainer();
-            var b = a.Resolve<IKhachHangService>();
+            var khachHangs = _khachHangService.GetAllKhachHang();
+            foreach (var kHang in khachHangs)
+            {
+                if (kHang.HoTen == tbHoTen.Text)
+                {
+                    MessageBox.Show("Khach hang da co");
+                    return;
+                }
+                
+
+            }
             var khachHang = new KhachHang
             {
                 HoTen = tbHoTen.Text,
                 DiaChi = tbDiaChi.Text,
                 SoDienThoai = tbSoDienThoai.Text
             };
-            b.InsertKhachHang(khachHang);
+            _khachHangService.InsertKhachHang(khachHang);
             MessageBox.Show("Them thanh cong");
         }
     }
