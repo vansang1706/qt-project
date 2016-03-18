@@ -39,6 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IKhachHangService.cs" />
+    <Compile Include="KhachHangService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ISanPhamService.cs" />
     <Compile Include="SanPhamService.cs" />

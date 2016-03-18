@@ -75,10 +75,19 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -109,6 +118,14 @@
     <ProjectReference Include="..\QT.IoC\QT.IoC.csproj">
       <Project>{45B172D7-A17D-4245-A394-5C603FFA9D63}</Project>
       <Name>QT.IoC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QT.Models\QT.Models.csproj">
+      <Project>{A020BEB9-21B4-49BC-B23C-EF00DB09966B}</Project>
+      <Name>QT.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QT.Repository.Pattern.Ef6\QT.Repository.Pattern.Ef6.csproj">
+      <Project>{53E63981-6E64-4297-94AA-941EF6F1741F}</Project>
+      <Name>QT.Repository.Pattern.Ef6</Name>
     </ProjectReference>
     <ProjectReference Include="..\QT.Repository.Pattern\QT.Repository.Pattern.csproj">
       <Project>{aed24434-c489-4c46-99cc-bed51d60f23b}</Project>

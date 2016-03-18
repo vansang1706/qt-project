@@ -15,9 +15,10 @@ namespace QT.IoC.Unity
             var container = new UnityContainer();
 
             container
-                .RegisterType<IDataContextAsync,QTContext>()
-                .RegisterType<IUnitOfWorkAsync,UnitOfWork>()
-                .RegisterType<ISanPhamService, SanPhamService>();
+                .RegisterType<IDataContextAsync, QTContext>()
+                .RegisterType<IUnitOfWorkAsync, UnitOfWork>()
+                .RegisterType<ISanPhamService, SanPhamService>()
+                .RegisterType<IKhachHangService, KhachHangService>();
             return container;
         }
     }

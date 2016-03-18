@@ -14,12 +14,8 @@ namespace QT.Services
             _unitOfWork = unitOfWork;
         }
 
-        public void InsertSanPham()
+        public void InsertSanPham(SanPham sanPham)
         {
-            var sanPham = new SanPham()
-            {
-                TenSanPham = "abc"
-            };
             Insert(sanPham);
             _unitOfWork.SaveChanges();
         }

@@ -8,8 +8,8 @@ using QT.Service.Pattern;
 
 namespace QT.Services
 {
-    public interface ISanPhamService : IService<SanPham>
+    public interface IKhachHangService:IService<KhachHang>
     {
-        void InsertSanPham(SanPham sanPham);
+        void InsertKhachHang(KhachHang khachHang);
     }
 }
