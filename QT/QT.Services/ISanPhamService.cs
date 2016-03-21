@@ -8,5 +8,7 @@ namespace QT.Services
     {
         void InsertSanPham(SanPham sanPham);
         List<SanPham> GetAllSanPham();
+        void UpdateSanPham(SanPham sanPham);
+        SanPham GetSanPhamByTenSanPham(string tenSanPham);
     }
 }

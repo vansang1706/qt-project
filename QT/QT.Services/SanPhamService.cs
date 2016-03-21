@@ -25,7 +25,18 @@ namespace QT.Services
         public List<SanPham> GetAllSanPham()
         {
             return Queryable().ToList();
-        } 
+        }
+
+        public void UpdateSanPham(SanPham sanPham)
+        {
+            Update(sanPham);
+            _unitOfWork.SaveChanges();
+        }
+
+        public SanPham GetSanPhamByTenSanPham(string tenSanPham)
+        {
+            return Queryable().FirstOrDefault(x => x.TenSanPham == tenSanPham);
+        }
 
         
     }

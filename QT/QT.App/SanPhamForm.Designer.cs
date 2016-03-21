@@ -1,6 +1,6 @@
 ﻿namespace QT.App
 {
-    partial class Form1
+    partial class SanPhamForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,20 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.tmSanPham = new System.Windows.Forms.ToolStripMenuItem();
-            this.tmKhachHang = new System.Windows.Forms.ToolStripMenuItem();
-            this.tmGiaBan = new System.Windows.Forms.ToolStripMenuItem();
-            this.tmHoaDon = new System.Windows.Forms.ToolStripMenuItem();
-            this.tmNhapHang = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabQuanLySanPham = new System.Windows.Forms.TabPage();
+            this.btCapNhatSanPham = new System.Windows.Forms.Button();
+            this.dgvSanPham = new System.Windows.Forms.DataGridView();
+            this.btThemSanPham = new System.Windows.Forms.Button();
             this.tabThemSuaSanPham = new System.Windows.Forms.TabPage();
-            this.pnSanPham = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.tbTenSanPham = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -49,118 +41,73 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btThem = new System.Windows.Forms.Button();
             this.nudSoLuongTon = new System.Windows.Forms.NumericUpDown();
-            this.btThemSanPham = new System.Windows.Forms.Button();
-            this.menuStrip1.SuspendLayout();
+            this.stt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenSanPham = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.donViTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soLuongTon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabQuanLySanPham.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSanPham)).BeginInit();
             this.tabThemSuaSanPham.SuspendLayout();
-            this.pnSanPham.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudSoLuongTon)).BeginInit();
             this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(478, 197);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "San Pham";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(478, 63);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Khach Hang";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(478, 151);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "Gia Ban";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(478, 107);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 9;
-            this.button4.Text = "Hoa Don";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tmSanPham,
-            this.tmKhachHang,
-            this.tmGiaBan,
-            this.tmHoaDon,
-            this.tmNhapHang});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(984, 24);
-            this.menuStrip1.TabIndex = 10;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // tmSanPham
-            // 
-            this.tmSanPham.Name = "tmSanPham";
-            this.tmSanPham.Size = new System.Drawing.Size(72, 20);
-            this.tmSanPham.Text = "Sản Phẩm";
-            this.tmSanPham.Click += new System.EventHandler(this.tmSanPham_Click);
-            // 
-            // tmKhachHang
-            // 
-            this.tmKhachHang.Name = "tmKhachHang";
-            this.tmKhachHang.Size = new System.Drawing.Size(84, 20);
-            this.tmKhachHang.Text = "Khách Hàng";
-            // 
-            // tmGiaBan
-            // 
-            this.tmGiaBan.Name = "tmGiaBan";
-            this.tmGiaBan.Size = new System.Drawing.Size(59, 20);
-            this.tmGiaBan.Text = "Giá Bán";
-            // 
-            // tmHoaDon
-            // 
-            this.tmHoaDon.Name = "tmHoaDon";
-            this.tmHoaDon.Size = new System.Drawing.Size(66, 20);
-            this.tmHoaDon.Text = "Hóa Đơn";
-            // 
-            // tmNhapHang
-            // 
-            this.tmNhapHang.Name = "tmNhapHang";
-            this.tmNhapHang.Size = new System.Drawing.Size(80, 20);
-            this.tmNhapHang.Text = "Nhập Hàng";
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabQuanLySanPham);
             this.tabControl1.Controls.Add(this.tabThemSuaSanPham);
-            this.tabControl1.Location = new System.Drawing.Point(3, 14);
+            this.tabControl1.Location = new System.Drawing.Point(2, 3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(350, 192);
+            this.tabControl1.Size = new System.Drawing.Size(517, 276);
             this.tabControl1.TabIndex = 11;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // tabQuanLySanPham
             // 
+            this.tabQuanLySanPham.Controls.Add(this.btCapNhatSanPham);
+            this.tabQuanLySanPham.Controls.Add(this.dgvSanPham);
             this.tabQuanLySanPham.Controls.Add(this.btThemSanPham);
             this.tabQuanLySanPham.Location = new System.Drawing.Point(4, 22);
             this.tabQuanLySanPham.Name = "tabQuanLySanPham";
             this.tabQuanLySanPham.Padding = new System.Windows.Forms.Padding(3);
-            this.tabQuanLySanPham.Size = new System.Drawing.Size(342, 166);
+            this.tabQuanLySanPham.Size = new System.Drawing.Size(509, 250);
             this.tabQuanLySanPham.TabIndex = 0;
             this.tabQuanLySanPham.Text = "Quản Lý Sản Phẩm";
             this.tabQuanLySanPham.UseVisualStyleBackColor = true;
+            // 
+            // btCapNhatSanPham
+            // 
+            this.btCapNhatSanPham.Location = new System.Drawing.Point(158, 207);
+            this.btCapNhatSanPham.Name = "btCapNhatSanPham";
+            this.btCapNhatSanPham.Size = new System.Drawing.Size(75, 23);
+            this.btCapNhatSanPham.TabIndex = 2;
+            this.btCapNhatSanPham.Text = "Cập Nhật Sản Phẩm";
+            this.btCapNhatSanPham.UseVisualStyleBackColor = true;
+            this.btCapNhatSanPham.Click += new System.EventHandler(this.btCapNhatSanPham_Click);
+            // 
+            // dgvSanPham
+            // 
+            this.dgvSanPham.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSanPham.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.stt,
+            this.tenSanPham,
+            this.donViTinh,
+            this.soLuongTon});
+            this.dgvSanPham.Location = new System.Drawing.Point(6, 6);
+            this.dgvSanPham.Name = "dgvSanPham";
+            this.dgvSanPham.Size = new System.Drawing.Size(497, 184);
+            this.dgvSanPham.TabIndex = 1;
+            // 
+            // btThemSanPham
+            // 
+            this.btThemSanPham.Location = new System.Drawing.Point(18, 207);
+            this.btThemSanPham.Name = "btThemSanPham";
+            this.btThemSanPham.Size = new System.Drawing.Size(109, 23);
+            this.btThemSanPham.TabIndex = 0;
+            this.btThemSanPham.Text = "Thêm Sản Phẩm";
+            this.btThemSanPham.UseVisualStyleBackColor = true;
+            this.btThemSanPham.Click += new System.EventHandler(this.btThemSanPham_Click);
             // 
             // tabThemSuaSanPham
             // 
@@ -174,18 +121,10 @@
             this.tabThemSuaSanPham.Location = new System.Drawing.Point(4, 22);
             this.tabThemSuaSanPham.Name = "tabThemSuaSanPham";
             this.tabThemSuaSanPham.Padding = new System.Windows.Forms.Padding(3);
-            this.tabThemSuaSanPham.Size = new System.Drawing.Size(342, 166);
+            this.tabThemSuaSanPham.Size = new System.Drawing.Size(509, 250);
             this.tabThemSuaSanPham.TabIndex = 1;
             this.tabThemSuaSanPham.Text = "Thêm Sản Phẩm";
             this.tabThemSuaSanPham.UseVisualStyleBackColor = true;
-            // 
-            // pnSanPham
-            // 
-            this.pnSanPham.Controls.Add(this.tabControl1);
-            this.pnSanPham.Location = new System.Drawing.Point(0, 30);
-            this.pnSanPham.Name = "pnSanPham";
-            this.pnSanPham.Size = new System.Drawing.Size(422, 255);
-            this.pnSanPham.TabIndex = 12;
             // 
             // label1
             // 
@@ -245,60 +184,62 @@
             this.nudSoLuongTon.Size = new System.Drawing.Size(100, 20);
             this.nudSoLuongTon.TabIndex = 12;
             // 
-            // btThemSanPham
+            // stt
             // 
-            this.btThemSanPham.Location = new System.Drawing.Point(146, 112);
-            this.btThemSanPham.Name = "btThemSanPham";
-            this.btThemSanPham.Size = new System.Drawing.Size(109, 23);
-            this.btThemSanPham.TabIndex = 0;
-            this.btThemSanPham.Text = "Thêm Sản Phẩm";
-            this.btThemSanPham.UseVisualStyleBackColor = true;
-            this.btThemSanPham.Click += new System.EventHandler(this.btThemSanPham_Click);
+            this.stt.DataPropertyName = "Id";
+            this.stt.HeaderText = "STT";
+            this.stt.Name = "stt";
+            this.stt.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.stt.Width = 50;
             // 
-            // Form1
+            // tenSanPham
+            // 
+            this.tenSanPham.DataPropertyName = "TenSanPham";
+            this.tenSanPham.HeaderText = "Tên Sản Phẩm";
+            this.tenSanPham.Name = "tenSanPham";
+            this.tenSanPham.Width = 150;
+            // 
+            // donViTinh
+            // 
+            this.donViTinh.DataPropertyName = "DonViTinh";
+            this.donViTinh.HeaderText = "Đơn Vị Tính";
+            this.donViTinh.Name = "donViTinh";
+            // 
+            // soLuongTon
+            // 
+            this.soLuongTon.DataPropertyName = "SoLuongTon";
+            this.soLuongTon.HeaderText = "Số Lượng Tồn";
+            this.soLuongTon.Name = "soLuongTon";
+            // 
+            // SanPhamForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 371);
-            this.Controls.Add(this.pnSanPham);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Form1";
-            this.Text = "Them San Pham";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.ClientSize = new System.Drawing.Size(984, 464);
+            this.Controls.Add(this.tabControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "SanPhamForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Quản Lý Sản Phẩm";
+            this.Load += new System.EventHandler(this.SanPhamForm_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabQuanLySanPham.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSanPham)).EndInit();
             this.tabThemSuaSanPham.ResumeLayout(false);
             this.tabThemSuaSanPham.PerformLayout();
-            this.pnSanPham.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.nudSoLuongTon)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem tmSanPham;
-        private System.Windows.Forms.ToolStripMenuItem tmKhachHang;
-        private System.Windows.Forms.ToolStripMenuItem tmGiaBan;
-        private System.Windows.Forms.ToolStripMenuItem tmHoaDon;
-        private System.Windows.Forms.ToolStripMenuItem tmNhapHang;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabQuanLySanPham;
-        private System.Windows.Forms.TabPage tabThemSuaSanPham;
-        private System.Windows.Forms.Panel pnSanPham;
+        private System.Windows.Forms.Button btCapNhatSanPham;
+        private System.Windows.Forms.DataGridView dgvSanPham;
         private System.Windows.Forms.Button btThemSanPham;
+        private System.Windows.Forms.TabPage tabThemSuaSanPham;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tbTenSanPham;
         private System.Windows.Forms.Label label2;
@@ -306,6 +247,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btThem;
         private System.Windows.Forms.NumericUpDown nudSoLuongTon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stt;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenSanPham;
+        private System.Windows.Forms.DataGridViewTextBoxColumn donViTinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn soLuongTon;
+
     }
 }
 

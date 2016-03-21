@@ -14,10 +14,20 @@ using QT.Services;
 
 namespace QT.App
 {
-    public partial class Form2 : Form
+    public partial class KhachHangForm : Form
     {
         private readonly IKhachHangService _khachHangService;
-        public Form2()
+        private static KhachHangForm _instance;
+
+        public static KhachHangForm Instance()
+        {
+            if (_instance == null)
+            {
+                _instance =  new KhachHangForm();
+            }
+            return _instance;
+        }
+        private KhachHangForm()
         {
             InitializeComponent();
             _khachHangService = UnityConfig.GetContainer().Resolve<IKhachHangService>();
@@ -44,6 +54,11 @@ namespace QT.App
             };
             _khachHangService.InsertKhachHang(khachHang);
             MessageBox.Show("Them thanh cong");
+        }
+
+        private void KhachHangForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

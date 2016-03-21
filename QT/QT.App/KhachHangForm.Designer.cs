@@ -1,6 +1,6 @@
 ﻿namespace QT.App
 {
-    partial class Form2
+    partial class KhachHangForm
     {
         /// <summary>
         /// Required designer variable.
@@ -95,7 +95,7 @@
             this.tbSoDienThoai.Size = new System.Drawing.Size(100, 20);
             this.tbSoDienThoai.TabIndex = 2;
             // 
-            // Form2
+            // KhachHangForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -107,8 +107,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btThemKhachHang);
-            this.Name = "Form2";
-            this.Text = "Thêm Khách Hàng";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "KhachHangForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Quản Lý Khách Hàng";
+            this.Load += new System.EventHandler(this.KhachHangForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
