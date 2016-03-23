@@ -56,7 +56,7 @@
             // 
             this.tabControl1.Controls.Add(this.tabQuanLySanPham);
             this.tabControl1.Controls.Add(this.tabThemSuaSanPham);
-            this.tabControl1.Location = new System.Drawing.Point(2, 3);
+            this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(517, 276);
@@ -80,7 +80,7 @@
             // 
             this.btCapNhatSanPham.Location = new System.Drawing.Point(158, 207);
             this.btCapNhatSanPham.Name = "btCapNhatSanPham";
-            this.btCapNhatSanPham.Size = new System.Drawing.Size(75, 23);
+            this.btCapNhatSanPham.Size = new System.Drawing.Size(128, 23);
             this.btCapNhatSanPham.TabIndex = 2;
             this.btCapNhatSanPham.Text = "Cập Nhật Sản Phẩm";
             this.btCapNhatSanPham.UseVisualStyleBackColor = true;
@@ -197,6 +197,7 @@
             this.tenSanPham.DataPropertyName = "TenSanPham";
             this.tenSanPham.HeaderText = "Tên Sản Phẩm";
             this.tenSanPham.Name = "tenSanPham";
+            this.tenSanPham.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.tenSanPham.Width = 150;
             // 
             // donViTinh
@@ -204,12 +205,15 @@
             this.donViTinh.DataPropertyName = "DonViTinh";
             this.donViTinh.HeaderText = "Đơn Vị Tính";
             this.donViTinh.Name = "donViTinh";
+            this.donViTinh.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.donViTinh.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
             // soLuongTon
             // 
             this.soLuongTon.DataPropertyName = "SoLuongTon";
             this.soLuongTon.HeaderText = "Số Lượng Tồn";
             this.soLuongTon.Name = "soLuongTon";
+            this.soLuongTon.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // SanPhamForm
             // 

@@ -117,16 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="CapNhatKhachHangText" xml:space="preserve">
-    <value>Cập Nhật Khách Hàng</value>
-  </data>
-  <data name="CapNhatSanPhamText" xml:space="preserve">
-    <value>Cập Nhật Sản Phẩm</value>
-  </data>
-  <data name="ThemKhachHangText" xml:space="preserve">
-    <value>Thêm Khách Hàng</value>
-  </data>
-  <data name="ThemSanPhamText" xml:space="preserve">
-    <value>Thêm Sản Phẩm</value>
-  </data>
 </root>

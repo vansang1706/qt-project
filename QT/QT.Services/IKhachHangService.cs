@@ -8,5 +8,7 @@ namespace QT.Services
     {
         void InsertKhachHang(KhachHang khachHang);
         List<KhachHang> GetAllKhachHang();
+        KhachHang GetKhachHangByTenKhachHang(string tenKhachHang);
+        void UpdateKhachHang(KhachHang khachHang);
     }
 }

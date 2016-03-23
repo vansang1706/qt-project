@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using Microsoft.Practices.Unity;
+using QT.Globalization;
 using QT.IoC.Unity;
 using QT.Models;
 using QT.Services;
@@ -34,7 +35,7 @@ namespace QT.App
             if (!tabControl1.TabPages.Contains(tabThemSuaSanPham))
             {
                 tabControl1.TabPages.Add(tabThemSuaSanPham);
-                tabThemSuaSanPham.Text = "Thêm Sản Phẩm";
+                tabThemSuaSanPham.Text = QT_Messages.ThemSanPhamText;
                 tabControl1.SelectedTab = tabThemSuaSanPham;
                 tbTenSanPham.Text = "";
                 tbDonViTinh.Text = "";
@@ -101,7 +102,7 @@ namespace QT.App
             if (!tabControl1.TabPages.Contains(tabThemSuaSanPham))
             {
                 tabControl1.TabPages.Add(tabThemSuaSanPham);
-                tabThemSuaSanPham.Text = "Cập Nhật Sản Phẩm";
+                tabThemSuaSanPham.Text = QT_Messages.CapNhatSanPhamText;
                 tabControl1.SelectedTab = tabThemSuaSanPham;
                 int rowIndex = dgvSanPham.SelectedCells[0].RowIndex;
                 tbTenSanPham.Text = dgvSanPham.Rows[rowIndex].Cells[1].Value.ToString();

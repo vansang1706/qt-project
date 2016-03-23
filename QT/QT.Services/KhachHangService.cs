@@ -24,6 +24,17 @@ namespace QT.Services
         public List<KhachHang> GetAllKhachHang()
         {
             return Queryable().ToList();
-        } 
+        }
+
+        public KhachHang GetKhachHangByTenKhachHang(string tenKhachHang)
+        {
+            return Queryable().FirstOrDefault(k => k.HoTen == tenKhachHang);
+        }
+
+        public void UpdateKhachHang(KhachHang khachHang)
+        {
+            Update(khachHang);
+            _unitOfWork.SaveChanges();
+        }
     }
 }
