@@ -36,5 +36,13 @@ namespace QT.Services
             Update(khachHang);
             _unitOfWork.SaveChanges();
         }
+
+        public string GetTenKhachHangById(int id)
+        {
+            var firstOrDefault = Queryable().FirstOrDefault(x => x.Id == id);
+            if (firstOrDefault != null) 
+                return firstOrDefault.HoTen;
+            return string.Empty;
+        }
     }
 }

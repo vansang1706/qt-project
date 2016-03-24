@@ -10,5 +10,6 @@ namespace QT.Services
         List<KhachHang> GetAllKhachHang();
         KhachHang GetKhachHangByTenKhachHang(string tenKhachHang);
         void UpdateKhachHang(KhachHang khachHang);
+        string GetTenKhachHangById(int id);
     }
 }

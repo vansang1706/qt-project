@@ -10,5 +10,7 @@ namespace QT.Services
         List<SanPham> GetAllSanPham();
         void UpdateSanPham(SanPham sanPham);
         SanPham GetSanPhamByTenSanPham(string tenSanPham);
+        string GetTenSanPhamById(int id);
+
     }
 }
