@@ -44,6 +44,13 @@ namespace QT.Services
                 listGiaBan.Add(giaBanViewModel);
             }
             return listGiaBan;
+
+            var t =
+                Queryable()
+                    .Join(_unitOfWork.Repository<SanPham>().Queryable(), gb => gb.SanPhamId, sp => sp.Id,
+                        (gb, sp) => new GiaBanViewModel {Stt = gb.Id})
+                    .ToList();
+            return t;
         }
     }
 }
