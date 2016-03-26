@@ -61,6 +61,15 @@ namespace QT.Globalization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cập Nhật Giá Bán.
+        /// </summary>
+        public static string CapNhatGiaBanText {
+            get {
+                return ResourceManager.GetString("CapNhatGiaBanText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cập Nhật Khách Hàng.
         /// </summary>
         public static string CapNhatKhachHangText {
@@ -75,6 +84,15 @@ namespace QT.Globalization {
         public static string CapNhatSanPhamText {
             get {
                 return ResourceManager.GetString("CapNhatSanPhamText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Thêm Giá Bán.
+        /// </summary>
+        public static string ThemGiaBanText {
+            get {
+                return ResourceManager.GetString("ThemGiaBanText", resourceCulture);
             }
         }
         

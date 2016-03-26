@@ -7,6 +7,10 @@ namespace QT.Services
 {
     public interface IGiaBanService:IService<GiaBan>
     {
-        List<GiaBanViewModel> GetAllGiaBan();
+        List<GiaBanViewModel> GetAllGiaBanToDataGridView();
+        List<GiaBan> GetAllGiaBan();
+        void InsertGiaBan(GiaBan giaBan);
+        GiaBan GetGiaBanById(int id);
+        void UpdateGiaBan(GiaBan giaBan);
     }
 }

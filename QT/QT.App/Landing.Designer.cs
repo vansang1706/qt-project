@@ -70,6 +70,7 @@
             this.giaBanToolStripMenuItem.Name = "giaBanToolStripMenuItem";
             this.giaBanToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.giaBanToolStripMenuItem.Text = "Giá Bán";
+            this.giaBanToolStripMenuItem.Click += new System.EventHandler(this.giaBanToolStripMenuItem_Click);
             // 
             // hoaDonToolStripMenuItem
             // 

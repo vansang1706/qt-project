@@ -25,32 +25,58 @@ namespace QT.Services
             _khachHangService = khachHangService;
         }
 
-        public List<GiaBanViewModel> GetAllGiaBan()
+        public List<GiaBanViewModel> GetAllGiaBanToDataGridView()
         {
-            var listGiaBan = new List<GiaBanViewModel>();
-            var giaBans = Queryable().ToList();
-            foreach (var giaBan in giaBans)
-            {
-                var tenSanPham = _sanPhamService.GetTenSanPhamById(giaBan.Id);
-                var tenKhachHang = _khachHangService.GetTenKhachHangById(giaBan.Id);
-                var giaBanViewModel = new GiaBanViewModel
-                {
-                    Stt = giaBan.Id,
-                    SanPham = tenSanPham,
-                    KhachHang = tenKhachHang,
-                    Gia = giaBan.Gia,
-                    NgayThayDoi = giaBan.NgayThayDoi
-                };
-                listGiaBan.Add(giaBanViewModel);
-            }
-            return listGiaBan;
+            var watch = System.Diagnostics.Stopwatch.StartNew();
 
-            var t =
+            var listGiaBan =
                 Queryable()
                     .Join(_unitOfWork.Repository<SanPham>().Queryable(), gb => gb.SanPhamId, sp => sp.Id,
-                        (gb, sp) => new GiaBanViewModel {Stt = gb.Id})
+                        (gb, sp) => new
+                        {
+                            gb.Id,
+                            sp.TenSanPham,
+                            gb.KhachHangId,
+                            gb.Gia,
+                            gb.NgayThayDoi
+                        })
+                    .Join(_unitOfWork.Repository<KhachHang>().Queryable(), gb => gb.KhachHangId, kh => kh.Id,
+                        (gb, kh) => new GiaBanViewModel
+                        {
+                            Stt = gb.Id,
+                            SanPham = gb.TenSanPham,
+                            KhachHang = kh.HoTen,
+                            Gia = gb.Gia,
+                            NgayThayDoi = gb.NgayThayDoi
+                        })
                     .ToList();
-            return t;
+
+            watch.Stop();
+            var elapsedMs = watch.ElapsedMilliseconds;
+
+            return listGiaBan;
+        }
+
+        public List<GiaBan> GetAllGiaBan()
+        {
+            return Queryable().ToList();
+        }
+
+        public void InsertGiaBan(GiaBan giaBan)
+        {
+            Insert(giaBan);
+            _unitOfWork.SaveChanges();
+        }
+
+        public GiaBan GetGiaBanById(int id)
+        {
+            return Queryable().FirstOrDefault(g => g.Id == id);
+        }
+
+        public void UpdateGiaBan(GiaBan giaBan)
+        {
+            Update(giaBan);
+            _unitOfWork.SaveChanges();
         }
     }
 }

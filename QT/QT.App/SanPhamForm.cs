@@ -37,8 +37,8 @@ namespace QT.App
                 tabControl1.TabPages.Add(tabThemSuaSanPham);
                 tabThemSuaSanPham.Text = QT_Messages.ThemSanPhamText;
                 tabControl1.SelectedTab = tabThemSuaSanPham;
-                tbTenSanPham.Text = "";
-                tbDonViTinh.Text = "";
+                tbTenSanPham.Text = string.Empty;
+                tbDonViTinh.Text = string.Empty;
                 nudSoLuongTon.Text = "0";
             }
         }
