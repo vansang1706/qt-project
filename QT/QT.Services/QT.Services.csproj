@@ -40,7 +40,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GiaBanService.cs" />
+    <Compile Include="HoaDonService.cs" />
     <Compile Include="IGiaBanService.cs" />
+    <Compile Include="IHoaDonService.cs" />
     <Compile Include="IKhachHangService.cs" />
     <Compile Include="KhachHangService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

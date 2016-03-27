@@ -19,7 +19,8 @@ namespace QT.IoC.Unity
                 .RegisterType<IUnitOfWorkAsync, UnitOfWork>()
                 .RegisterType<ISanPhamService, SanPhamService>()
                 .RegisterType<IKhachHangService, KhachHangService>()
-                .RegisterType<IGiaBanService, GiaBanService>();
+                .RegisterType<IGiaBanService, GiaBanService>()
+                .RegisterType<IHoaDonService, HoaDonService>();
             return container;
         }
     }

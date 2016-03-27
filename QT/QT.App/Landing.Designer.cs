@@ -77,6 +77,7 @@
             this.hoaDonToolStripMenuItem.Name = "hoaDonToolStripMenuItem";
             this.hoaDonToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.hoaDonToolStripMenuItem.Text = "Hóa Đơn";
+            this.hoaDonToolStripMenuItem.Click += new System.EventHandler(this.hoaDonToolStripMenuItem_Click);
             // 
             // nhapHangToolStripMenuItem
             // 
